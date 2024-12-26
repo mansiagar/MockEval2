@@ -33,6 +33,7 @@ let getdata = async () => {
     let res = await fetch(`${baseUrl}/Question`);
     let data = res.json();
     console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
   }
@@ -51,22 +52,16 @@ let displayData = (arr) => {
     let card = document.createElement("div");
     let title = document.createElement("h4");
     title.textContent = `title : ${el.ques}`;
-
     let OptionA = document.createElement("h4");
     OptionA.textContent = `OptionA : ${el.A}`;
-
     let OptionB = document.createElement("h4");
     OptionB.textContent = `OptionB : ${el.B}`;
-
     let OptionC = document.createElement("h4");
     OptionC.textContent = `OptionC : ${el.C}`;
-
     let OptionD = document.createElement("h4");
     OptionD.textContent = `OptionD : ${el.D}`;
-
     let correct = document.createElement("h4");
     correct.textContent = `Correct Answer : ${el.correct}`;
-
     card.append(title, OptionA, OptionB, OptionC, OptionD, correct);
     cont.append(card);
   });

@@ -14,6 +14,15 @@
       "D": "DELETE",
       "correct": "C",
       "id": 1
+    },
+    {
+      "ques": "Which of the following methods is used to update?",
+      "A": "GET",
+      "B": "POST",
+      "C": "PATCH",
+      "D": "DELETE",
+      "correct": "B",
+      "id": 2
     }
   ]
 }
